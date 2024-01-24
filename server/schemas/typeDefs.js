@@ -40,10 +40,10 @@ type User {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-
+    updateMovie(): Movie 
+    addMovie(): Movie
+    addReview(movie: String!, rating: Number!, comment: String!): Review
   }
-
-
-`;
+`; // updateMovie and addMovie are not finished yet
 
 module.exports = typeDefs;

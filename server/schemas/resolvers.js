@@ -13,7 +13,7 @@ const resolvers = {
             }
             if (name) {
                 params.name = {
-                //UPDATE
+                    $regex: name
                 };
             }
             return await Review.find(params).populate('movie')
@@ -21,8 +21,7 @@ const resolvers = {
         user: async (parent, {_id}) => {
             if (context.user) {
                 const user = await User.findById(context.user._id).populate({
-                    //ADD PATH
-                    path: '',
+                    path: 'reviews',
                     populate: 'review'
                 });
 
@@ -59,11 +58,31 @@ const resolvers = {
         
             return { token, user };
             },
-        updateMovie: async () => {
-            // ADD CODE AND UPDATE TYPEDEFS
+        addMovie: async (parent, args, context) => {
+            // FINISH AND UPDATE TYPEDEFS
         },
-        updateUser: async () => {
-            // ADD CODE AND UPDATE TYPEDEFS
+        updateMovie: async (parent, args, context) => {
+            // FINISH AND UPDATE TYPEDEFS
+        },
+        addReview: async (parent, { movie, rating, comment }, context) => {
+            if (context.user) {
+                const review = await Review.create({ movie, rating, comment });
+            
+                await User.findByIdAndUpdate(
+                    { _id: context.user._id },
+                    { $push: { reviews: review._id } },
+                    { new: true }
+                );
+            
+                return review;
+            }
+            
+            throw new AuthenticationError('You need to be logged in!');
+        },
+        updateUser: async (parent, args, context) => {
+            if(context.user) {
+                return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+            };
         }
         
     }
