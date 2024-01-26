@@ -24,6 +24,8 @@ Beluchi Igboanugo - (https://github.com/BeluchiIgbo)
 Gabriel Barrett - (https://github.com/g-barrett)
 Catherine Parker - (https://github.com/caparker23)
 
+MongoDB Docs - https://www.mongodb.com/docs/manual/
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
