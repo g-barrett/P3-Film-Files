@@ -6,14 +6,14 @@ const resolvers = {
         movies: async () => {
             return await Movie.find();
         },
-        reviews: async (parent, { movie, name }) => {
+        reviews: async (parent, { movie, user }) => {
             const params = {};
             if (movie) {
                 params.movie = movie;
             }
-            if (name) {
-                params.name = {
-                    $regex: name
+            if (user) {
+                params.user = {
+                    $regex: user
                 };
             }
             return await Review.find(params).populate('movie')
@@ -58,11 +58,20 @@ const resolvers = {
         
             return { token, user };
             },
-        addMovie: async (parent, args, context) => {
-            // FINISH AND UPDATE TYPEDEFS
+        addMovie: async (parent, {title, year, imdbId, actors, poster, reviews}) => {
+            return await Movie.create({ title, year, imdbId, actors, poster, reviews})
         },
-        updateMovie: async (parent, args, context) => {
-            // FINISH AND UPDATE TYPEDEFS
+        updateMovie: async (parent, {movieId, review}) => {
+            return Movie.findOneAndUpdate(
+                {_id: movieId},
+                {
+                    $addToSet: {reviews: review} //Double check if this is how review is added to movie and check typeDef mutation
+                },
+                {
+                    new: true,
+                    runValidators: true,
+                }
+            );
         },
         addReview: async (parent, { movie, rating, comment }, context) => {
             if (context.user) {
