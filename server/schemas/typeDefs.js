@@ -32,7 +32,9 @@ type User {
   }
 
   type Query {
-    
+    movies: [Movie]
+    reviews (movie: String, user: String): [Review]
+    user (_id: String): [User]
 
   }
 
@@ -40,8 +42,8 @@ type User {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
-    updateMovie(): Movie 
-    addMovie(): Movie
+    updateMovie(movieId: ID!, review: String!): Movie 
+    addMovie(title: String!, year: Int, imdbId: String, actors: String, poster: String, reviews: [Review]): Movie
     addReview(movie: String!, rating: Number!, comment: String!): Review
   }
 `; // updateMovie and addMovie are not finished yet
