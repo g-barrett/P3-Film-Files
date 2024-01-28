@@ -33,6 +33,7 @@ type User {
 
   type Query {
     movies: [Movie]
+    single_movie (title: String, year: Int): Movie
     reviews (movie: String, user: String): [Review]
     user (_id: String): [User]
 
@@ -46,6 +47,6 @@ type User {
     addMovie(title: String!, year: Int, imdbId: String, actors: String, poster: String, reviews: [Review]): Movie
     addReview(movie: String!, rating: Number!, comment: String!): Review
   }
-`; // updateMovie and addMovie are not finished yet
+`;
 
 module.exports = typeDefs;

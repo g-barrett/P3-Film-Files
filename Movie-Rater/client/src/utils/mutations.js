@@ -36,3 +36,16 @@ export const LOGIN_USER = gql`
         }
     }
 `;
+
+export const ADD_MOVIE = gql`
+    mutation addMovie($title: String!, $year: Int!, $poster: String, $reviews: String) {
+        addMovie(title: $title, year: $year, poster: $poster, reviews: $reviews) {
+            _id
+            title
+            year
+            poster
+            reviews
+        }
+    }
+`;
+
