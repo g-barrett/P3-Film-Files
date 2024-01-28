@@ -1,3 +1,4 @@
+
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 // import reactLogo from './assets/react.svg'
@@ -31,7 +32,9 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 function App() {
+
   // const [count, setCount] = useState(0)
 
   return (
