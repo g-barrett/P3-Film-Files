@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import Error from './pages/Error.jsx';
-import Signup from './pages/Signup.jsx';
-import AddProfile from './pages/AddProfile.jsx';
+// import Signup from './pages/Signup.jsx';
+// import AddProfile from './pages/AddProfile.jsx';
 
 import './index.css'
 
@@ -15,14 +15,14 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
-      {
-        index: true,
-        element: <Signup />
-      },
-      {
-        path: '/profiles/:profileId',
-        element: <AddProfile />
-      },
+      // {
+      //   index: true,
+      //   element: <Signup />
+      // },
+      // {
+      //   path: '/profiles/:profileId',
+      //   element: <AddProfile />
+      // },
     ]
   },
 ]);
