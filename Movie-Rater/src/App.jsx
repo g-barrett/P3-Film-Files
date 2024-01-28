@@ -1,13 +1,14 @@
 
 import { Outlet } from 'react-router-dom';
-import { useState } from 'react';
+// import { useState } from 'react';
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 
 import './App.css'
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
-import Signup from './pages/Signup';
-import AddProfile from './pages/AddProfile';
+import Header from './components/header';
+// import Signup from './pages/Signup';
+// import AddProfile from './pages/AddProfile';
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
@@ -40,8 +41,12 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="flex-column justify-flex-start min-100-vh">
-      <Signup />
-      <AddProfile />
+        <Header />
+        <div className="container">
+          <Outlet />
+        </div>
+      {/* <Signup />
+      <AddProfile /> */}
       </div>
     </ApolloProvider>
   );
