@@ -1,5 +1,5 @@
 const User = require('./User');
-const Movie = require('./Movie')
+const Movie = require('./User');
 const Review = require('./Review')
 
 

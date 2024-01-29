@@ -21,9 +21,9 @@ type User {
     _id: ID
     user: [User]
     movie: [Movie]
-    rating: Number
+    rating: Int
     comment: String
-    date: Date
+    date: String
   }
 
   type Auth {
@@ -44,8 +44,8 @@ type User {
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
     updateMovie(movieId: ID!, review: String!): Movie 
-    addMovie(title: String!, year: Int, imdbId: String, actors: String, poster: String, reviews: [Review]): Movie
-    addReview(movie: String!, rating: Number!, comment: String!): Review
+    addMovie(title: String!, year: Int, imdbId: String, actors: String, poster: String, reviews: String): Movie
+    addReview(movie: String!, rating: Int!, comment: String!): Review
   }
 `;
 
