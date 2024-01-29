@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
+const { Schema, mongoose } = require('mongoose');
 
 const movieSchema = new Schema({
   title: {
@@ -8,7 +6,7 @@ const movieSchema = new Schema({
     required: true,   
   },
   year: {
-    type: Int,
+    type: Number,
   },
   imdbId: {
     type: String,
