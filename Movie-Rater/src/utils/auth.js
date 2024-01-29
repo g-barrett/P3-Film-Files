@@ -23,15 +23,15 @@
 //         return localStorage.getItem('id_token');
 //     }
 
-//     // login(idToken) {
-//     //     localStorage.setItem('id_token', idToken);
-//     //     window.location.assign('/');
-//     // }
+//     login(idToken) {
+//         localStorage.setItem('id_token', idToken);
+//         window.location.assign('/');
+//     }
 
-//     // logout() {
-//     //     localStorage.removeItem('id_token');
-//     //     window.location.reload();
-//     // }
+//     logout() {
+//         localStorage.removeItem('id_token');
+//         window.location.reload();
+//     }
 // }
 
 // export default new AuthService();
