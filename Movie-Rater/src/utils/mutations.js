@@ -11,8 +11,6 @@ mutation addProfile($email: String!, $password: String!) {
     }
 }`;
 
-import { gql } from '@apollo/client';
-
 export const ADD_USER = gql`
     mutation addUser($firstName: String!, $lastName: String!, $email: String!, $password: String!) {
         addUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password){
@@ -51,7 +49,7 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_MOVIE = gql`
-    mutation addMovie($title: String!, $year: Int!, $poster: String, $reviews: String) {
+    mutation addMovie($title: String!, $year: Number!, $poster: String, $reviews: String) {
         addMovie(title: $title, year: $year, poster: $poster, reviews: $reviews) {
             _id
             title

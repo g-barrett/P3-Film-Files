@@ -42,8 +42,8 @@ export const QUERY_MOVIE = gql`
 `;
 
 export const QUERY_SINGLE_MOVIE = gql`
-    query single_movie($title: String, $year: Int) {
-        single_movie(title: $title, year: $Int) {
+    query single_movie($title: String, $year: Number) {
+        single_movie(title: $title, year: $Number) {
             title
             year
             actors
