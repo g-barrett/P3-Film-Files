@@ -20,14 +20,14 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <Error />,
     children: [
-      {
-        index: true,
-        element: <Signup />
-      },
-      {
-        path: '/login',
-        element: <Login />
-      },
+      //{
+       // index: true,
+       // element: <Signup />
+      //},
+      //{
+      //  path: '/login',
+       // element: <Login />
+     // },
       {
         path: '/profiles/:profileId',
         element: <AddProfile />
