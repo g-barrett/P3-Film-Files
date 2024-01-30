@@ -7,8 +7,8 @@ import { Outlet } from 'react-router-dom';
 import './App.css'
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import Header from './components/header';
-// import Signup from './pages/Signup';
-// import AddProfile from './pages/AddProfile';
+import Signup from './pages/Signup';
+import AddProfile from './pages/AddProfile';
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
@@ -45,8 +45,8 @@ function App() {
         <div className="container">
           <Outlet />
         </div>
-      {/* <Signup />
-      <AddProfile /> */}
+      <Signup />
+      <AddProfile />
       </div>
     </ApolloProvider>
   );
