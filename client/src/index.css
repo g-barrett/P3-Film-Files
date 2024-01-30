@@ -64,5 +64,6 @@ button:focus-visible {
   }
   button {
     background-color: #154bed;
+    color:antiquewhite;
   }
 }
