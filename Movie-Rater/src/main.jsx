@@ -41,9 +41,13 @@ const router = createBrowserRouter([
         element: <Movie />
       },
       {
-        path: 'review',
+        path: '/review',
         element: <Review />
-      }
+      },
+      // {
+      //   path: '/signup',
+      //   element: <Signup />
+      // }
     ]
   },
 ]);

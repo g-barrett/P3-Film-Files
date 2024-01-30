@@ -14,11 +14,11 @@ const Signup = () => {
 
     // updates the state based on the form input changes
     const handleChange = (event) => {
-        const { email, value } = event.target;
+        const { name, value } = event.target;
 
         setFormState({
             ...formState,
-            [email]: value,
+            [name]: value,
         });
     };
 
