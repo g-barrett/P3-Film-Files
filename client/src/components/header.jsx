@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-
 import Auth from '../utils/auth';
+import background from "../assets/images/MRlogo.png";
+
 
 const Header = () => {
     const logout = (event) => {
