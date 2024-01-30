@@ -25,6 +25,7 @@ class Auth {
 
   login(idToken) {
     localStorage.setItem('id_token', idToken);
+    console.log('Logged in successfully. Token:', idToken);
     window.location.assign('/');
   }
 
