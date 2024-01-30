@@ -44,10 +44,10 @@ const router = createBrowserRouter([
         path: '/review',
         element: <Review />
       },
-      // {
-      //   path: '/signup',
-      //   element: <Signup />
-      // }
+      {
+        path: '/signup',
+        element: <Signup />
+      }
     ]
   },
 ]);
