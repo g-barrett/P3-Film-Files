@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_MOVIE } from '../utils/queries';
-import React, { useState } from 'react'; // Import React and useState
+import React, { useState } from 'react';
 import { ADD_MOVIE } from '../utils/mutations';
 
 const Movie = () => {
@@ -45,7 +45,7 @@ const Movie = () => {
 
         const APIKEY = "45739ece";
         async function getMovieData() {
-            let response = await fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&t=${title}&y=${year}`);
+            let response = await fetch(`https://www.omdbapi.com/?apikey=${APIKEY}&t=${title}&y=${year}`);
             const data = await response.json();
             setMovie(data);
             // addMovie({
@@ -83,17 +83,17 @@ const Movie = () => {
                         Submit
                     </button>
                 </form>
-            {movie.length > 0 &&
-                <ul>
-                    {movie.map((data) => (
-                        <li key={data[0].id}>
-                            <div>{data.Title} - {data.Year} - {data.Ratings} - {data.Poster}</div>
-                        </li>
-                    ))}
-                </ul>
-            }
+                {Object.keys(movie).length > 0 && (
+                <div>
+                    <div>{movie.Title} - {movie.Year} - {movie.Actors}</div>
+                    <div>Ratings: {movie.Ratings && movie.Ratings.map(rating => rating.Value).join(', ')}</div>
+                    <img src={movie.Poster} alt={movie.Title} />
+                </div>
+            )}
         </div>
         )
 };
 
 export default Movie;
+
+
