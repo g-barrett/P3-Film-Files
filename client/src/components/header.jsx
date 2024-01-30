@@ -10,11 +10,15 @@ const Header = () => {
     return (
         <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
             <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
-                <Link className="text-dark" to="/">
-                    <h1 className="m-0" style={{ fontSize: '3rem' }}>
-                        Home
+                <div className="text-dark" to="/">
+                    
+                    <h1 className="m-0" style={{ fontSize: '10rem' }}>
+                        Movie Rater
                     </h1>
-                </Link>
+                    <h2>
+                        Quality Movies, Quality Reviews
+                    </h2>
+                </div>
                     <div>
                         {Auth.loggedIn() ? (
                             <>
