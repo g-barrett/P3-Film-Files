@@ -6,8 +6,8 @@ const cleanDB = require('./cleanDB');
 db.once('open', async () => {
   try {
     await cleanDB('User', 'users');
-
-    await User.create(userSeeds);
+    
+    await Movie.create(movieSeeds);
 
     console.log('all done!');
     process.exit(0);
