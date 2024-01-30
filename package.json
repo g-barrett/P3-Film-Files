@@ -9,9 +9,11 @@
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "render-build":"npm install && npm run build"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "concurrently": "^8.2.2"
   }
 }
