@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_REVIEW = gql`
-    mutation addReview($movie: String!, $rating: Number!, $comment: String!) {
+    mutation addReview($movie: String!, $rating: Int!, $comment: String!) {
         addReview(movie: $movie, rating: $rating, comment: $comment) {
             _id
             movie
@@ -35,27 +35,37 @@ export const ADD_REVIEW = gql`
     }
 `;
 
-export const LOGIN_USER = gql`
-    mutation login($email: String!, $password: String!) {
-        login(email: $email, password: $password) {
-            token
-            user {
-                _id
-                firstName
-                lastName
-            }
-        }
+// export const LOGIN = gql`
+//     mutation login($email: String!, $password: String!) {
+//         login(email: $email, password: $password) {
+//             token
+//             user {
+//                 _id
+//             }
+//         }
+//     }
+// `;
+
+export const LOGIN = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        _id
+      }
     }
+  }
 `;
 
+
+
 export const ADD_MOVIE = gql`
-    mutation addMovie($title: String!, $year: Number!, $poster: String, $reviews: String) {
-        addMovie(title: $title, year: $year, poster: $poster, reviews: $reviews) {
+    mutation addMovie($title: String!, $year: Number!, $poster: String) {
+        addMovie(title: $title, year: $year, poster: $poster) {
             _id
             title
             year
             poster
-            reviews
         }
     }
 `;
