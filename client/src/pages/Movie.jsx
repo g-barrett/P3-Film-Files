@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_MOVIE } from '../utils/queries';
 import React, { useState } from 'react'; // Import React and useState
-
+import { ADD_MOVIE } from '../utils/mutations';
 
 const Movie = () => {
     const [movie, setMovie] = useState({});
