@@ -45,7 +45,7 @@ const Movie = () => {
 
         const APIKEY = "45739ece";
         async function getMovieData() {
-            let response = await fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&t=${title}&y=${year}`);
+            let response = await fetch(`https://www.omdbapi.com/?apikey=${APIKEY}&t=${title}&y=${year}`);
             const data = await response.json();
             setMovie(data);
             // addMovie({
