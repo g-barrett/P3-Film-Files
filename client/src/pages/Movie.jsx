@@ -85,7 +85,7 @@ const Movie = () => {
                 </form>
                 {Object.keys(movie).length > 0 && (
                 <div>
-                    <div>{movie.Title} - {movie.Year}</div>
+                    <div>{movie.Title} - {movie.Year} - {movie.Actors}</div>
                     <div>Ratings: {movie.Ratings && movie.Ratings.map(rating => rating.Value).join(', ')}</div>
                     <img src={movie.Poster} alt={movie.Title} />
                 </div>
