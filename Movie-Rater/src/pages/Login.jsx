@@ -14,11 +14,11 @@ const Login = () => {
     const [addProfile, { error, data}] = useMutation(ADD_PROFILE);
 
     const handleChange = (event) => {
-        const { email, value } = event.target;
+        const { name, value } = event.target;
 
         setFormState({
             ...formState,
-            [email]: value,
+            [name]: value,
         });
     };
 

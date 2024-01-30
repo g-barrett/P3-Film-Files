@@ -31,7 +31,7 @@ const AddProfile = () => {
     if (!profile?.name) {
         return (
             <h4>
-                Please log in to see your profile page.
+                Please log in to see movie page.
             </h4>
         );
     }
