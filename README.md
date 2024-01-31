@@ -17,6 +17,13 @@ To start, you'll want to run an `npm run install` in your terminal to install al
 ## Usage
 When you load the app, you'll be presented with a login/signup page. After entering in the required fields, you'll be taken to a home search page. Search for movie titles, realease year, and included actors! After you select your movie, you'll be able to see reviews and leave your own!
 
+## Screenshot
+![image](../src/assets/images/screenshot.png) 
+
+## Demo
+
+### [Deployed Site](https://film-files.onrender.com/)
+
 ## Credits
 Daniel Park - (https://github.com/lildano50)
 Cara Rosa - (https://github.com/CaraRosa)
