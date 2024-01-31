@@ -60,7 +60,7 @@ export const LOGIN = gql`
 
 
 export const ADD_MOVIE = gql`
-    mutation addMovie($title: String!, $year: Number!, $poster: String) {
+    mutation addMovie($title: String!, $year: String!, $poster: String) {
         addMovie(title: $title, year: $year, poster: $poster) {
             _id
             title

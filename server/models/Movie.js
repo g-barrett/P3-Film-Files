@@ -6,7 +6,8 @@ const movieSchema = new Schema({
     required: true,   
   },
   year: {
-    type: Number,
+    type: String,
+    required: true,
   },
   imdbId: {
     type: String,
@@ -16,6 +17,7 @@ const movieSchema = new Schema({
   },
   poster: {
     type: String,
+    required: true,
   },
   reviews: [{
     type: mongoose.Schema.Types.ObjectId,
