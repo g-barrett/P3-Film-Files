@@ -82,7 +82,7 @@ const Movie = () => {
                         style={{ cursor: 'pointer' }}
                         type="submit"
                     >
-                        Submit
+                        Search
                     </button>
                 </form>
                 {Object.keys(movie).length > 0 && (
