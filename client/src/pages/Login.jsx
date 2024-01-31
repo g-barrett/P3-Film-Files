@@ -4,43 +4,34 @@ import { useMutation } from '@apollo/client';
 // import { ADD_PROFILE } from '../utils/mutations';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-
 const Login = () => {
     const [formState, setFormState] = useState({
         email: '',
         password: '',
     });
-
     const [login, { error, data}] = useMutation(LOGIN);
-
     const handleChange = (event) => {
         const { name, value } = event.target;
-
         setFormState({
             ...formState,
             [name]: value,
         });
     };
-
     // form that submits
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-
         try {
             const { data } = await login({
                 variables: { ...formState },
             });
-
             Auth.login(data.login.token);
         } catch (e) {
             console.error(e);
         }
     };
-
     return (
         <div className="container my-1">
         <Link to="/signup">← Go to Signup</Link>
-
         <h2>Login</h2>
         <form onSubmit={handleFormSubmit}>
             <div className="flex-row space-between my-2">
@@ -75,5 +66,4 @@ const Login = () => {
         </div>
     );
     }
-
 export default Login;

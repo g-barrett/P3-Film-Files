@@ -5,8 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Error from './pages/Error.jsx';
 // import AddProfile from './pages/AddProfile.jsx';
-// import Signup from './pages/Signup.jsx';
-// import Login from './pages/Login.jsx';
+import Signup from './pages/Signup.jsx';
+import Login from './pages/Login.jsx';
 import Movie from './pages/Movie.jsx';
 import Review from './pages/Review.jsx';
 // import Signup from './pages/Signup.jsx';
@@ -22,12 +22,12 @@ const router = createBrowserRouter([
     children: [
       {
        index: true,
-       element: <Movie />
+       element: <Login />
       },
-    //   {
-    //    path: '/login',
-    //    element: <Login />
-    //  },
+      {
+       path: '/movie',
+       element: <Movie />
+     },
       // {
       //   path: '/profiles/:profileId',
       //   element: <AddProfile />
@@ -44,10 +44,10 @@ const router = createBrowserRouter([
         path: '/review',
         element: <Review />
       },
-      // {
-      //   path: '/signup',
-      //   element: <Signup />
-      // }
+      {
+        path: '/signup',
+        element: <Signup />
+      }
     ]
   },
 ]);
