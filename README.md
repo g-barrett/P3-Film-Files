@@ -10,7 +10,6 @@
 <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat" alt="Tailwind CSS Badge">
 <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff&style=flat" alt="Vite Badge">
 </p>
-## Description
 A MERN stack application for finding and rating movies based on title, year, or actors!
 
 ## Motivation
