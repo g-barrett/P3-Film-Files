@@ -27,7 +27,7 @@ To start, you'll want to run an `npm run install` in your terminal to install al
 When you load the app, you'll be presented with a login/signup page. After entering in the required fields, you'll be taken to a home search page. Search for movie titles, realease year, and included actors! After you select your movie, you'll be able to see reviews and leave your own!
 
 ## Screenshot
-![image](../src/assets/images/screenshot.png) 
+![image](https://github.com/g-barrett/P3-Film-Files/blob/BeluchiIgbo-patch-1/client/src/assets/images/screenshot.png) 
 
 ## Demo
 
