@@ -61,8 +61,8 @@ const resolvers = {
         
             return { token, user };
             },
-        addMovie: async (parent, {title, year, imdbId, actors, poster, reviews}) => {
-            return await Movie.create({ title, year, imdbId, actors, poster, reviews})
+        addMovie: async (parent, {title, year, poster}) => {
+            return await Movie.create({ title, year, poster})
         },
         updateMovie: async (parent, {movieId, review}) => {
             return Movie.findOneAndUpdate(

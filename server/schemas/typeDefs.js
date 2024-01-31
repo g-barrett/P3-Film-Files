@@ -8,7 +8,7 @@ type User {
   type Movie {
     _id: ID
     title: String
-    year: Int
+    year: String
     imdbId: String
     actors: String
     poster: String
@@ -38,11 +38,11 @@ type User {
   }
 
   type Mutation {
-    addUser(email: String!, password: String!): Auth
+    addUser(email: String, password: String): Auth
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
     updateMovie(movieId: ID!, review: String!): Movie 
-    addMovie(title: String!, year: Int, imdbId: String, actors: String, poster: String, reviews: String): Movie
+    addMovie(title: String!, year: String!, poster: String!): Movie
     addReview(movie: String!, rating: Int!, comment: String!): Review
   }
 `;
