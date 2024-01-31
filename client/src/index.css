@@ -69,5 +69,19 @@ button:focus-visible {
   button {
     background-color: #154bed;
     color:antiquewhite;
+    order: 4;
+    flex: 0 1 auto;
+    align-self: auto;
   }
+}
+
+input {
+  min-width: 20px;
+  padding: 8px;
+  margin: 0 4px 0 0;
+  border: 1px solid #666;
+  border-radius: 5px;
+  height: 30px;
+  order: 0;
+  align-self: auto;  
 }

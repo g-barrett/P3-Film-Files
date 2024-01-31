@@ -64,12 +64,14 @@ const Movie = () => {
             <div className="movie">
                 <form onSubmit={handleSubmit}>
                     <input
+                        placeholder = "Enter Movie Title"
                         type="text"
                         value={title}
                         onChange={handleMovieChange}
                         title="Movie"
                     />
                     <input
+                        placeholder = "Enter Movie Year"
                         type="text"
                         value={year}
                         onChange={handleYearChange}
