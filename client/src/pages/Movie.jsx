@@ -19,27 +19,6 @@ const Movie = () => {
         setYear(event.target.value);
     }
 
-    // const handleSubmit = async (event) => {
-    //     event.preventDefault();
-    //     const APIKEY = process.env.REACT_APP_API_KEY; // Access environment variable directly
-    //     try {
-    //         const response = await fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&t=${title}&y=${year}`);
-    //         const data = await response.json();
-    //         setMovie(data);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // };
-
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     const APIKEY = "45739ece"
-    //     fetch(`http://www.omdbapi.com/?apikey=${APIKEY}&t=${title}&y=${year}`)
-    //         .then((response) => response.json())
-    //         .then((data) => setMovie(data))
-    //         .catch((error) => console.log(error));
-    // }
-
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -89,7 +68,7 @@ const Movie = () => {
                 <div>
                     <div>{movie.Title} - {movie.Year} - {movie.Actors}</div>
                     <div>Ratings: {movie.Ratings && movie.Ratings.map(rating => rating.Value).join(', ')}</div>
-                    <img src={movie.Poster} alt={movie.Title} />
+                    <Link to ='/review'><img src={movie.Poster} alt={movie.Title} /></Link>
                 </div>
             )}
         </div>
