@@ -58,11 +58,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+ 
   :root {
     color: #f3f6f9;
     background-color: #000000;
-    background-image: url('../src/assets/images/bg2.png');
+    background-image: url('./assets/images/bg2.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -76,7 +76,6 @@ button:focus-visible {
     flex: 0 1 auto;
     align-self: auto;
   }
-}
 
 input {
   min-width: 20px;
