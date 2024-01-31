@@ -3,6 +3,7 @@ import { QUERY_SINGLE_MOVIE } from "../utils/queries";
 import { useQuery, useMutation } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useParams } from "react-router-dom";
 
 const Review = () => {
     let { title, year } = useParams();

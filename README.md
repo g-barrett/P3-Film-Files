@@ -12,7 +12,7 @@ As film enthusiasts, we wanted a place to be able to leave our personal thoughts
 - [Credits](#credits)
 
 ## Installation
-To start, you'll want to run an `npm run install` in your terminal to install all of the dependencies. Then, in your gitbash or homebrew, run `mongod`. Afterwards, run `node server/server.js` in the root directory. Then open a second terminal in your root directory and run `npm run build` You're ready to go!
+To start, you'll want to run an `npm run install` in your terminal to install all of the dependencies. Afterwards, run `node server/server.js` in the root directory. Then open a second terminal in your root directory and run `npm run build` You're ready to go!
 
 ## Usage
 When you load the app, you'll be presented with a login/signup page. After entering in the required fields, you'll be taken to a home search page. Search for movie titles, realease year, and included actors! After you select your movie, you'll be able to see reviews and leave your own!
