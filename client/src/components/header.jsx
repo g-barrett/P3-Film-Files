@@ -14,7 +14,7 @@ const Header = () => {
                 <div className="text-dark" to="/">
                     
                     <h1 className="m-0" style={{ fontSize: '10rem' }}>
-                        Movie Rater
+                        Film Files
                     </h1>
                     <h2>
                         Quality Movies, Quality Reviews
